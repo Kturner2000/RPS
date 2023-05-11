@@ -7,5 +7,6 @@ function computePlay(compChoice) {
     } else if(choiceNum === 2) {
         compChoice.Value = "scissors";
     }
+    console.log(choiceNum);
+    return choiceNum;
 } 
-console.log(computePlay(compChoice))
