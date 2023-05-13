@@ -6,28 +6,17 @@ let draws = 0;
 // const paper = document.querySelector('.paper');
 // const scissors = document.querySelector('.scissors')
 
+const options = document.querySelectorAll('.options');
+options.forEach((option) => {
+    option.addEventListener("click", function() {
+        const pInput = this.textContent;
 
-function game() {
-    let playScore = 0;
-    let compScore = 0;
-    let moveCompleted = 0;
-}
-
-function playGame() {
-    const playerRock = document.querySelector('.rock');
-    const playerPaper = document.querySelector('.paper');
-    const playerScissors = document.querySelector('.scissors');
-    const playerChoices = [playerRock,playerPaper, playerPaper]
-    const compChoices = ['rock', 'paper', 'scissors'];
-    // function to start the game
-    playerChoices.forEach(choice => {
-        addEventListener.apply('click', function() {
-            let compAnswer = play[Math.floor(Math.random() * play.length)];
+        let compAnswer = play[Math.floor(Math.random() * play.length)];
         return compAnswer;
-        } )
     })
+})
 
-}
+
 
 
 for (let i = 0; i < 5; i++) {
