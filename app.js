@@ -6,20 +6,32 @@ let draws = 0;
 // const paper = document.querySelector('.paper');
 // const scissors = document.querySelector('.scissors')
 
-function getCompChoice {
+function getCompChoice() {
     let play = ['rock', 'paper', 'scissors'];
     let compAnswer = play[Math.floor(Math.random() * play.length)];
     return compAnswer;
 }
 
 function game() {
-    let playScore = ''
-    let compScore = ''
-    let moveCompleted = ''
+    let playScore = 0;
+    let compScore = 0;
+    let moveCompleted = 0;
 }
 
 function playGame() {
-    
+    const playerRock = document.querySelector('.rock');
+    const playerPaper = document.querySelector('.paper');
+    const playerScissors = document.querySelector('.scissors');
+    const playerChoices = [playerRock,playerPaper, playerPaper]
+    const compChoices = ['rock', 'paper', 'scissors'];
+    // function to start the game
+    playerChoices.forEach(choice => {
+        addEventListener.apply('click', function() {
+            let compAnswer = play[Math.floor(Math.random() * play.length)];
+        return compAnswer;
+        } )
+    })
+
 }
 
 
