@@ -9,32 +9,34 @@ let draws = 0;
 const options = document.querySelectorAll('.options');
 options.forEach((option) => {
     option.addEventListener("click", function() {
-        const pInput = this.textContent;
-
+        let userAnswer = this.textContent;
         let compAnswer = play[Math.floor(Math.random() * play.length)];
         return compAnswer;
+        compareInputs(userAnswer, compAnswer)
     })
 })
+function compareInputs(userAnswer,compAnswer ) {
+    const currentMatch = `${userAnswer} vs ${compAnswer}`
+    if(userAnswer === compAnswer) {
+        draws++
+        alert(`${currentMatch} is a Tie`)
+    }else if ((userAnswer === 'rock' && compAnswer === 'paper') ||
+    (userAnswer === 'paper' && compAnswer === 'scissors') || 
+    (userAnswer === 'scissors' && compAnswer === 'rock')) {
+        losses++
+        alert(`${currentMatch} = Computer Wins`)
+    } else {
+        wins++
+    alert(`${currentMatch} = You Win`)
+    }
+}
 
 
 
 
 for (let i = 0; i < 5; i++) {
-    let userAnswer = prompt("Rock Paper or Scissors");
-    userAnswer = userAnswer.toLowerCase();
-    
+   
 
-    if(userAnswer === compAnswer) {
-        draws++
-        alert(`It's a draw. We're keeping tabs... (${draws})`)
-    } else if ((userAnswer === 'rock' && compAnswer === 'paper') ||
-    (userAnswer === 'paper' && compAnswer === 'scissors') || 
-    (userAnswer === 'scissors' && compAnswer === 'rock')) {
-        losses++
-        alert(`You have lost ${losses} times ahaha!`)
-    } else {
-        wins++
-    alert(`You have won ${wins} times, luck lol.`)
-    }
+     
 }
 
