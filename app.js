@@ -10,8 +10,8 @@ const options = document.querySelectorAll('.options');
 options.forEach((option) => {
     option.addEventListener("click", function() {
         let userAnswer = this.textContent;
+        userAnswer = userAnswer.toLowerCase();
         let compAnswer = play[Math.floor(Math.random() * play.length)];
-        return compAnswer;
         compareInputs(userAnswer, compAnswer)
     })
 })
