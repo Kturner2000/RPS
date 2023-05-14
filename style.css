@@ -1,0 +1,26 @@
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+.options {
+    width: 200px;
+    height: 200px;
+    font-size: 0px;
+}
+.rock{
+    background-image: url(./img/rock.jpeg);
+    background-size: cover;
+}
+.paper{
+    background-image: url(./img/paper.jpeg);
+    background-size: cover;
+}
+.scissors{
+    background-image: url(./img/scissors.jpeg);
+    background-size: cover;
+}
+
+.scores {
+    display: flex;
+    justify-content: space-around;
+}

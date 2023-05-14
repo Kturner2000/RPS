@@ -4,6 +4,7 @@ let losses = 0;
 let draws = 0;
 let gamesPlayed = 0;
 let maxGames = 5;
+let endResult = document.querySelector('.results')
 // const rock = document.querySelector('.rock');
 // const paper = document.querySelector('.paper');
 // const scissors = document.querySelector('.scissors')
@@ -18,8 +19,25 @@ options.forEach((option) => {
         if(gamesPlayed < maxGames){
         let userAnswer = this.textContent;
         userAnswer = userAnswer.toLowerCase();
+        
         let compAnswer = play[Math.floor(Math.random() * play.length)];
         compareInputs(userAnswer, compAnswer)
+        
+    } else {
+        if(losses > wins && losses > draws) {
+            endResult.textContent = 'Computer Wins'
+            endResult.style.color = 'red';
+            compScore.style.fontSize = '2rem'
+        } else if(wins > losses && wins > draws ) {
+            endResult.textContent = 'You Wins'
+            endResult.style.color = 'cadetblue';
+            playerScore.style.fontSize = '2rem'
+        } else {
+            endResult.textContent = "It's  a tie"
+            endResult.style.color = 'green';
+            drawScore.style.fontSize = '2rem'
+        }
+        winner()
     }
 });
 });
@@ -42,6 +60,7 @@ function compareInputs(userAnswer,compAnswer ) {
 
     }
 }
-     
-
-
+function winner() {
+    endResult.style.fontSize = '6rem';
+    endResult.style.textAlign = 'center';
+}
